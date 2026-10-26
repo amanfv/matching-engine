@@ -4,3 +4,9 @@ build*/
 # claude
 .claude/ 
 CLAUDE.md
+
+# vscode
+.vscode/
+
+# metadata
+.DS_Store
