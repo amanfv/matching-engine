@@ -14,4 +14,10 @@ namespace lob {
 
     // 1 byte is enough to represent a Buy or Sell
     enum class Side : std::uint8_t {Buy, Sell};
+
+    // static price band: orders priced outside [kMinTick, kMaxTick] are rejected (PriceOutOfRange)
+    // both engines use the same band; the flat price array needs a fixed window to index into
+    inline constexpr Price kMinTick = 1;          // $0.01
+    inline constexpr Price kMaxTick = 100'000;    // $1,000.00
 }
+
